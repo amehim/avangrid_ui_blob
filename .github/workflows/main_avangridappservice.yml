@@ -21,7 +21,7 @@ jobs:
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '14-lts'
+        node-version: '16-lts'
 
     - name: npm install, build, and test
       run: |
@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: avangridAppService
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3506A7815C9546BA97790F71B673A43A }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9B728949ED3A46D8B6EA70B219A740A7 }}
         package: .
 
