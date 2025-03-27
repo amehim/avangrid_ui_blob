@@ -15,13 +15,13 @@ jobs:
     steps:
     # checkout the repo
     - name: 'Checkout Github Action'
-      uses: actions/checkout@main
+      uses: actions/checkout@master
 
 
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '16-lts'
+        node-version: '22-lts'
 
     - name: npm install, build, and test
       run: |
@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: avangridAppService
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9B728949ED3A46D8B6EA70B219A740A7 }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4E50660345E34A949351436449BD7C59 }}
         package: .
 
